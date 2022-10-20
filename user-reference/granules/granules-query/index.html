@@ -606,6 +606,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#earthdata.search.DataGranules.cloud_hosted" class="md-nav__link">
+    cloud_hosted()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#earthdata.search.DataGranules.day_night_flag" class="md-nav__link">
     day_night_flag()
   </a>
@@ -876,6 +883,13 @@
         <li class="md-nav__item">
   <a href="#earthdata.search.DataGranules.cloud_cover" class="md-nav__link">
     cloud_cover()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#earthdata.search.DataGranules.cloud_hosted" class="md-nav__link">
+    cloud_hosted()
   </a>
   
 </li>
@@ -1156,6 +1170,53 @@ a collection filtering parameter such as short_name or entry_title.</p>
 
 
 
+<h2 id="earthdata.search.DataGranules.cloud_hosted" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">cloud_hosted</span><span class="p">(</span><span class="n">cloud_hosted</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+
+</h2>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Only match granules that are hosted in the cloud. This is valid for public collections and if we are using the short_name parameter. Concept-Id is unambiguous.</p>
+<details class="tip" open="open">
+<summary>Tip</summary>
+<p>Cloud hosted collections can be public or restricted.
+Restricted collections will not be matched using this parameter</p>
+</details>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>cloud_hosted</code></td>
+          <td>
+                <code>Boolean</code>
+          </td>
+          <td><p>True to require granules only be online</p></td>
+          <td>
+                <code>True</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
 <h2 id="earthdata.search.DataGranules.day_night_flag" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">day_night_flag</span><span class="p">(</span><span class="n">day_night_flag</span><span class="p">)</span></code>
 
@@ -1284,7 +1345,7 @@ method is online_only().</p>
 
 
 <h2 id="earthdata.search.DataGranules.get" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">get</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">20000</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">get</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">2000</span><span class="p">)</span></code>
 
 </h2>
 
@@ -1318,7 +1379,7 @@ they can be potentially millions of them.</p>
           </td>
           <td><p>The number of results to return</p></td>
           <td>
-                <code>20000</code>
+                <code>2000</code>
           </td>
         </tr>
     </tbody>
