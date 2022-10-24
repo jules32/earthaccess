@@ -897,7 +897,7 @@
 
 
 <h2 id="earthdata.store.Store.get" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">get</span><span class="p">(</span><span class="n">granules</span><span class="o">=</span><span class="p">[],</span> <span class="n">local_path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">access</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">provider</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">threads</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">get</span><span class="p">(</span><span class="n">granules</span><span class="p">,</span> <span class="n">local_path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">access</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">provider</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">threads</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span></code>
 
 </h2>
 
@@ -927,11 +927,11 @@
         <tr>
           <td><code>granules</code></td>
           <td>
-                <code><span title="typing.List">List</span>[<span title="typing.Any">Any</span>]</code>
+                <code><span title="typing.Union">Union</span>[<span title="typing.List">List</span>[<a class="autorefs autorefs-internal" title="earthdata.results.DataGranule" href="../../granules/granules/#earthdata.results.DataGranule">DataGranule</a>], <span title="typing.List">List</span>[str]]</code>
           </td>
           <td><p>a list of granules(DataGranule) instances or a list of granule links (HTTP)</p></td>
           <td>
-                <code>[]</code>
+              <em>required</em>
           </td>
         </tr>
         <tr>

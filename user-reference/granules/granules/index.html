@@ -892,7 +892,7 @@
 
 
 <h2 id="earthdata.results.DataGranule.data_links" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">data_links</span><span class="p">(</span><span class="n">access</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">data_links</span><span class="p">(</span><span class="n">access</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">in_region</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 </h2>
 
@@ -920,6 +920,16 @@
           <td><p>direct or external, direct means in-region access for cloud hosted collections.</p></td>
           <td>
                 <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>in_region</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td><p>if we are running in us-west-2, meant for the store class, default is False</p></td>
+          <td>
+                <code>False</code>
           </td>
         </tr>
     </tbody>
