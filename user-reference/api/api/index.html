@@ -10,14 +10,14 @@
       
       
       
-        <link rel="canonical" href="https://github.com/nsidc/earthaccess/user-reference/collections/collections/">
+        <link rel="canonical" href="https://github.com/nsidc/earthaccess/user-reference/api/api/">
       
       <link rel="icon" href="../../../earth.png">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.11">
     
     
       
-        <title>Collection Results - earthaccess</title>
+        <title>Search and Access - earthaccess</title>
       
     
     
@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#documentation-for-collection-results" class="md-skip">
+        <a href="#earthaccess-api" class="md-skip">
           Skip to content
         </a>
       
@@ -103,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Collection Results
+              Search and Access
             
           </span>
         </div>
@@ -399,12 +399,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" checked>
       
       
       
@@ -425,11 +427,87 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../api/api/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Search and Access
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Search and Access
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#earthaccess.api" class="md-nav__link">
+    earthaccess.api
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#earthaccess.api.download" class="md-nav__link">
+    download()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#earthaccess.api.login" class="md-nav__link">
+    login()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#earthaccess.api.open" class="md-nav__link">
+    open()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#earthaccess.api.search_data" class="md-nav__link">
+    search_data()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#earthaccess.api.search_datasets" class="md-nav__link">
+    search_datasets()
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -446,14 +524,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
       
       
       
@@ -474,14 +550,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_1" type="checkbox" id="__nav_4_2_1" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_1" type="checkbox" id="__nav_4_2_1" >
       
       
       
@@ -504,7 +578,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../collections-query/" class="md-nav__link">
+      <a href="../../collections/collections-query/" class="md-nav__link">
         Collection Queries
       </a>
     </li>
@@ -516,115 +590,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Collection Results
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../collections/collections/" class="md-nav__link">
         Collection Results
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#earthaccess.results.DataCollection" class="md-nav__link">
-    earthaccess.results.DataCollection
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#earthaccess.results.DataCollection.abstract" class="md-nav__link">
-    abstract()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#earthaccess.results.DataCollection.concept_id" class="md-nav__link">
-    concept_id()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#earthaccess.results.DataCollection.data_type" class="md-nav__link">
-    data_type()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#earthaccess.results.DataCollection.get_data" class="md-nav__link">
-    get_data()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#earthaccess.results.DataCollection.get_umm" class="md-nav__link">
-    get_umm()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#earthaccess.results.DataCollection.landing_page" class="md-nav__link">
-    landing_page()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#earthaccess.results.DataCollection.s3_bucket" class="md-nav__link">
-    s3_bucket()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#earthaccess.results.DataCollection.summary" class="md-nav__link">
-    summary()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#earthaccess.results.DataCollection.version" class="md-nav__link">
-    version()
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -893,71 +863,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#earthaccess.results.DataCollection" class="md-nav__link">
-    earthaccess.results.DataCollection
+  <a href="#earthaccess.api" class="md-nav__link">
+    earthaccess.api
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#earthaccess.results.DataCollection.abstract" class="md-nav__link">
-    abstract()
+  <a href="#earthaccess.api.download" class="md-nav__link">
+    download()
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#earthaccess.results.DataCollection.concept_id" class="md-nav__link">
-    concept_id()
+  <a href="#earthaccess.api.login" class="md-nav__link">
+    login()
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#earthaccess.results.DataCollection.data_type" class="md-nav__link">
-    data_type()
+  <a href="#earthaccess.api.open" class="md-nav__link">
+    open()
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#earthaccess.results.DataCollection.get_data" class="md-nav__link">
-    get_data()
+  <a href="#earthaccess.api.search_data" class="md-nav__link">
+    search_data()
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#earthaccess.results.DataCollection.get_umm" class="md-nav__link">
-    get_umm()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#earthaccess.results.DataCollection.landing_page" class="md-nav__link">
-    landing_page()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#earthaccess.results.DataCollection.s3_bucket" class="md-nav__link">
-    s3_bucket()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#earthaccess.results.DataCollection.summary" class="md-nav__link">
-    summary()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#earthaccess.results.DataCollection.version" class="md-nav__link">
-    version()
+  <a href="#earthaccess.api.search_datasets" class="md-nav__link">
+    search_datasets()
   </a>
   
 </li>
@@ -976,21 +918,17 @@
                 
 
 
-<h1 id="documentation-for-collection-results">Documentation for <code>Collection Results</code></h1>
+<h1 id="earthaccess-api"><strong>earthaccess</strong> API</h1>
+<p>earthaccess is a Python library that simplifies data discovery and access to NASA Earth science data by providing a higher abstraction for NASA’s Search API (CMR) so that searching for data can be done using a simpler notation instead of low level HTTP queries.</p>
+<p>This library handles authentication with NASA’s OAuth2 API (EDL) and provides HTTP and AWS S3 sessions that can be used with xarray and other PyData libraries to access NASA EOSDIS datasets directly allowing scientists get to their science in a simpler and faster way, reducing barriers to cloud-based data analysis.</p>
+<hr />
 
 
-<div class="doc doc-object doc-class">
+<div class="doc doc-object doc-module">
 
 
-<a id="earthaccess.results.DataCollection"></a>
+<a id="earthaccess.api"></a>
   <div class="doc doc-contents first">
-      <p class="doc doc-class-bases">
-        Bases: <code><span title="earthaccess.results.CustomDict">CustomDict</span></code></p>
-
-  
-      <p>Dictionary-like object to represent a data collection from CMR</p>
-
-
 
   
 
@@ -1008,119 +946,76 @@
 
 
 
-<h2 id="earthaccess.results.DataCollection.abstract" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">abstract</span><span class="p">()</span></code>
+<h2 id="earthaccess.api.download" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">download</span><span class="p">(</span><span class="n">granules</span><span class="p">,</span> <span class="n">local_path</span><span class="p">,</span> <span class="n">provider</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">threads</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span></code>
 
 </h2>
 
 
   <div class="doc doc-contents ">
   
+      <p>Retrieves data granules from a remote storage system.</p>
+<ul>
+<li>If we run this in the cloud we are moving data from S3 to a cloud compute instance (EC2, AWS Lambda)</li>
+<li>If we run it outside the us-west-2 region and the data granules are part of a cloud-based
+     collection the method will not get any files.</li>
+<li>If we requests data granules from an on-prem collection the data will be effectively downloaded
+     to a local directory.</li>
+</ul>
 
-  <p><strong>Returns:</strong></p>
+  <p><strong>Parameters:</strong></p>
   <table>
     <thead>
       <tr>
+        <th>Name</th>
         <th>Type</th>
         <th>Description</th>
+        <th>Default</th>
       </tr>
     </thead>
     <tbody>
         <tr>
+          <td><code>granules</code></td>
           <td>
-                <code>str</code>
+                <code><span title="typing.Union">Union</span>[<span title="typing.List">List</span>[earthaccess.<span title="earthaccess.results">results</span>.<a class="autorefs autorefs-internal" title="earthaccess.results.DataGranule" href="../../granules/granules/#earthaccess.results.DataGranule">DataGranule</a>], <span title="typing.List">List</span>[str]]</code>
           </td>
-          <td><p>Returns the abstract of a collection</p></td>
+          <td><p>a list of granules(DataGranule) instances or a list of granule links (HTTP)</p></td>
+          <td>
+              <em>required</em>
+          </td>
         </tr>
-    </tbody>
-  </table>
-
-  </div>
-
-</div>
-
-<div class="doc doc-object doc-function">
-
-
-
-<h2 id="earthaccess.results.DataCollection.concept_id" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">concept_id</span><span class="p">()</span></code>
-
-</h2>
-
-
-  <div class="doc doc-contents ">
-  
-
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
         <tr>
+          <td><code>local_path</code></td>
           <td>
-                <code>str</code>
+                <code><span title="typing.Optional">Optional</span>[str]</code>
           </td>
-          <td><p>Retrurns a collection's <code>concept_id</code>, this id is the most relevant search field on granule queries.</p></td>
+          <td><p>local directory to store the remote data granules</p></td>
+          <td>
+              <em>required</em>
+          </td>
         </tr>
-    </tbody>
-  </table>
-
-  </div>
-
-</div>
-
-<div class="doc doc-object doc-function">
-
-
-
-<h2 id="earthaccess.results.DataCollection.data_type" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">data_type</span><span class="p">()</span></code>
-
-</h2>
-
-
-  <div class="doc doc-contents ">
-  
-
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
         <tr>
+          <td><code>provider</code></td>
           <td>
-                <code>str</code>
+                <code><span title="typing.Optional">Optional</span>[str]</code>
           </td>
-          <td><p>If available, it returns the collection data type, i.e. HDF5, CSV etc</p></td>
+          <td><p>if we download a list of URLs we need to specify the provider.</p></td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>threads</code></td>
+          <td>
+                <code>int</code>
+          </td>
+          <td><p>parallel number of threads to use to download the files, adjust as necessary, default = 8</p></td>
+          <td>
+                <code>8</code>
+          </td>
         </tr>
     </tbody>
   </table>
-
-  </div>
-
-</div>
-
-<div class="doc doc-object doc-function">
-
-
-
-<h2 id="earthaccess.results.DataCollection.get_data" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">get_data</span><span class="p">()</span></code>
-
-</h2>
-
-
-  <div class="doc doc-contents ">
-  
 
   <p><strong>Returns:</strong></p>
   <table>
@@ -1135,7 +1030,7 @@
           <td>
                 <code><span title="typing.List">List</span>[str]</code>
           </td>
-          <td><p>Returns the GET DATA links, usually a link to a landing page, a DAAC portal or an FTP location.</p></td>
+          <td><p>List of downloaded files</p></td>
         </tr>
     </tbody>
   </table>
@@ -1148,14 +1043,15 @@
 
 
 
-<h2 id="earthaccess.results.DataCollection.get_umm" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">get_umm</span><span class="p">(</span><span class="n">umm_field</span><span class="p">)</span></code>
+<h2 id="earthaccess.api.login" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">login</span><span class="p">(</span><span class="n">strategy</span><span class="o">=</span><span class="s1">&#39;interactive&#39;</span><span class="p">)</span></code>
 
 </h2>
 
 
   <div class="doc doc-contents ">
   
+      <p>Authenticate with Earthdata login (https://urs.earthdata.nasa.gov/)</p>
 
   <p><strong>Parameters:</strong></p>
   <table>
@@ -1169,11 +1065,27 @@
     </thead>
     <tbody>
         <tr>
-          <td><code>umm_field</code></td>
+          <td><code>strategy</code></td>
           <td>
-                <code>str</code>
+                <code>String</code>
           </td>
-          <td><p>Valid UMM item, i.e. <code>TemporalExtent</code></p></td>
+          <td><p>authentication method.</p>
+<div class="highlight"><pre><span></span><code>&quot;interactive&quot;: (default) enter username and password.
+
+&quot;netrc&quot;: retrieve username and password from ~/.netrc.
+
+&quot;environment&quot;: retrieve username and password from $EDL_USERNAME and $EDL_PASSWORD.
+</code></pre></div></td>
+          <td>
+                <code>&#39;interactive&#39;</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>persist</code></td>
+          <td>
+                <code>Boolean</code>
+          </td>
+          <td><p>will persist credentials in a .netrc file</p></td>
           <td>
               <em>required</em>
           </td>
@@ -1192,9 +1104,9 @@
     <tbody>
         <tr>
           <td>
-                <code><span title="typing.Union">Union</span>[str, <span title="typing.Dict">Dict</span>[str, <span title="typing.Any">Any</span>]]</code>
+                <code><a class="autorefs autorefs-internal" title="earthaccess.auth.Auth" href="../../auth/auth/#earthaccess.auth.Auth">Auth</a></code>
           </td>
-          <td><p>Returns the value of a given field inside the UMM (Unified Metadata Model)</p></td>
+          <td><p>an instance of Auth.</p></td>
         </tr>
     </tbody>
   </table>
@@ -1207,14 +1119,40 @@
 
 
 
-<h2 id="earthaccess.results.DataCollection.landing_page" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">landing_page</span><span class="p">()</span></code>
+<h2 id="earthaccess.api.open" class="doc doc-heading">
+<code class="highlight language-python"><span class="nb">open</span><span class="p">(</span><span class="n">granules</span><span class="p">,</span> <span class="n">provider</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 </h2>
 
 
   <div class="doc doc-contents ">
   
+      <p>Returns a list of fsspec file-like objects that can be used to access files
+hosted on S3 or HTTPS by third party libraries like xarray.</p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>granules</code></td>
+          <td>
+                <code><span title="typing.Union">Union</span>[<span title="typing.List">List</span>[str], <span title="typing.List">List</span>[earthaccess.<span title="earthaccess.results">results</span>.<a class="autorefs autorefs-internal" title="earthaccess.results.DataGranule" href="../../granules/granules/#earthaccess.results.DataGranule">DataGranule</a>]]</code>
+          </td>
+          <td><p>a list of granule instances <strong>or</strong> list of URLs, e.g. s3://some-granule,</p></td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
 
   <p><strong>Returns:</strong></p>
   <table>
@@ -1227,9 +1165,9 @@
     <tbody>
         <tr>
           <td>
-                <code>str</code>
+                <code><span title="typing.List">List</span>[<span title="fsspec.AbstractFileSystem">AbstractFileSystem</span>]</code>
           </td>
-          <td><p>if available it returns the first landing page for the collection, can be many.</p></td>
+          <td><p>a list of s3fs "file pointers" to s3 files.</p></td>
         </tr>
     </tbody>
   </table>
@@ -1242,32 +1180,101 @@
 
 
 
-<h2 id="earthaccess.results.DataCollection.s3_bucket" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">s3_bucket</span><span class="p">()</span></code>
+<h2 id="earthaccess.api.search_data" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">search_data</span><span class="p">(</span><span class="n">count</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
 </h2>
 
 
   <div class="doc doc-contents ">
   
+      <p>Search dataset granules using NASA's CMR.</p>
+<p><a href="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html">https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html</a></p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>count</code></td>
+          <td>
+                <code>Integer</code>
+          </td>
+          <td><p>Number of records to get, -1 = all</p></td>
+          <td>
+                <code>-1</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>kwargs</code></td>
+          <td>
+                <code><span title="typing.Dict">Dict</span></code>
+          </td>
+          <td><p>arguments to CMR:</p>
+<ul>
+<li>
+<p><strong>short_name</strong>: dataset short name e.g. ATL08</p>
+</li>
+<li>
+<p><strong>version</strong>: dataset version</p>
+</li>
+<li>
+<p><strong>doi</strong>: DOI for a dataset</p>
+</li>
+<li>
+<p><strong>daac</strong>: e.g. NSIDC or PODAAC</p>
+</li>
+<li>
+<p><strong>provider</strong>: particular to each DAAC, e.g. POCLOUD, LPDAAC etc.</p>
+</li>
+<li>
+<p><strong>temporal</strong>: ("yyyy-mm-dd", "yyyy-mm-dd")</p>
+</li>
+<li>
+<p><strong>bounding_box</strong>: (lower_left_lon, lower_left_lat ,
+                   upper_right_lon, upper_right_lat)</p>
+</li>
+</ul></td>
+          <td>
+                <code>{}</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
 
   <p><strong>Returns:</strong></p>
   <table>
     <thead>
       <tr>
-        <th>Type</th>
+<th>Name</th>        <th>Type</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
         <tr>
-          <td>
-                <code><span title="typing.Dict">Dict</span>[str, <span title="typing.Any">Any</span>]</code>
+<td><code>Granules</code></td>          <td>
+                <code><span title="typing.List">List</span>[earthaccess.<span title="earthaccess.results">results</span>.<a class="autorefs autorefs-internal" title="earthaccess.results.DataGranule" href="../../granules/granules/#earthaccess.results.DataGranule">DataGranule</a>]</code>
           </td>
-          <td><p>Returns the S3 bucket information if the collection has it (<strong>cloud hosted collections only</strong>)</p></td>
+          <td><p>a list of DataGranules that can be used to access
+the granule files by using <code>download()</code> or <code>open()</code>.</p></td>
         </tr>
     </tbody>
   </table>
+
+<p><strong>Examples:</strong></p>
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="__codelineno-0-1"></a><span class="n">datasets</span> <span class="o">=</span> <span class="n">earthaccess</span><span class="o">.</span><span class="n">search_data</span><span class="p">(</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="__codelineno-0-2"></a>    <span class="n">doi</span><span class="o">=</span><span class="s2">&quot;10.5067/SLREF-CDRV2&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="__codelineno-0-3"></a>    <span class="n">cloud_hosted</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="__codelineno-0-4"></a>    <span class="n">temporal</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;2002-01-01&quot;</span><span class="p">,</span> <span class="s2">&quot;2002-12-31&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="__codelineno-0-5"></a><span class="p">)</span>
+</code></pre></div>
 
   </div>
 
@@ -1277,15 +1284,74 @@
 
 
 
-<h2 id="earthaccess.results.DataCollection.summary" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">summary</span><span class="p">()</span></code>
+<h2 id="earthaccess.api.search_datasets" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">search_datasets</span><span class="p">(</span><span class="n">count</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
 </h2>
 
 
   <div class="doc doc-contents ">
   
-      <p>Summary containing short_name, concept-id, file-type, and cloud-info if the dataset is cloud hosted.</p>
+      <p>Search datasets using NASA's CMR</p>
+<p><a href="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html">https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html</a></p>
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>count</code></td>
+          <td>
+                <code>Integer</code>
+          </td>
+          <td><p>Number of records to get, -1 = all</p></td>
+          <td>
+                <code>-1</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>kwargs</code></td>
+          <td>
+                <code><span title="typing.Dict">Dict</span></code>
+          </td>
+          <td><p>arguments to CMR:</p>
+<ul>
+<li>
+<p><strong>keyword</strong>: case insensitive and support wild cards ? and *,</p>
+</li>
+<li>
+<p><strong>short_name</strong>: e.g. ATL08</p>
+</li>
+<li>
+<p><strong>doi</strong>: DOI for a dataset</p>
+</li>
+<li>
+<p><strong>daac</strong>: e.g. NSIDC or PODAAC</p>
+</li>
+<li>
+<p><strong>provider</strong>: particular to each DAAC, e.g. POCLOUD, LPDAAC etc.</p>
+</li>
+<li>
+<p><strong>temporal</strong>: ("yyyy-mm-dd", "yyyy-mm-dd")</p>
+</li>
+<li>
+<p><strong>bounding_box</strong>: (lower_left_lon, lower_left_lat ,
+                   upper_right_lon, upper_right_lat)</p>
+</li>
+</ul></td>
+          <td>
+                <code>{}</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
 
   <p><strong>Returns:</strong></p>
   <table>
@@ -1298,47 +1364,25 @@
     <tbody>
         <tr>
           <td>
-                <code><span title="typing.Dict">Dict</span>[str, <span title="typing.Any">Any</span>]</code>
+                <code><span title="typing.List">List</span>[earthaccess.<span title="earthaccess.results">results</span>.<a class="autorefs autorefs-internal" title="earthaccess.results.DataCollection" href="../../collections/collections/#earthaccess.results.DataCollection">DataCollection</a>]</code>
           </td>
-          <td><p>Returns a sumary of the collection metadata</p></td>
+          <td><p>an list of DataCollection results that can be used to get</p></td>
         </tr>
-    </tbody>
-  </table>
-
-  </div>
-
-</div>
-
-<div class="doc doc-object doc-function">
-
-
-
-<h2 id="earthaccess.results.DataCollection.version" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">version</span><span class="p">()</span></code>
-
-</h2>
-
-
-  <div class="doc doc-contents ">
-  
-
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
         <tr>
           <td>
-                <code>str</code>
+                <code><span title="typing.List">List</span>[earthaccess.<span title="earthaccess.results">results</span>.<a class="autorefs autorefs-internal" title="earthaccess.results.DataCollection" href="../../collections/collections/#earthaccess.results.DataCollection">DataCollection</a>]</code>
           </td>
-          <td><p>returns the collection's version.</p></td>
+          <td><p>information such as concept_id, doi, etc. about a dataset.</p></td>
         </tr>
     </tbody>
   </table>
+
+<p><strong>Examples:</strong></p>
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="__codelineno-0-1"></a><span class="n">datasets</span> <span class="o">=</span> <span class="n">earthaccess</span><span class="o">.</span><span class="n">search_datasets</span><span class="p">(</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="__codelineno-0-2"></a>    <span class="n">keywords</span><span class="o">=</span><span class="s2">&quot;sea surface anomaly&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="__codelineno-0-3"></a>    <span class="n">cloud_hosted</span><span class="o">=</span><span class="kc">True</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="__codelineno-0-4"></a><span class="p">)</span>
+</code></pre></div>
 
   </div>
 
@@ -1364,7 +1408,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../collections-query/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Collection Queries" rel="prev">
+        <a href="../../../tutorials/cloud/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Search and cloud-based datasets" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -1373,20 +1417,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Collection Queries
+              Search and cloud-based datasets
             </div>
           </div>
         </a>
       
       
         
-        <a href="../../granules/granules-query/" class="md-footer__link md-footer__link--next" aria-label="Next: Granule Queries" rel="next">
+        <a href="../../collections/collections-query/" class="md-footer__link md-footer__link--next" aria-label="Next: Collection Queries" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Granule Queries
+              Collection Queries
             </div>
           </div>
           <div class="md-footer__button md-icon">
