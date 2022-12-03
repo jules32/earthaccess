@@ -196,8 +196,6 @@
           
             
               
-                
-              
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -284,8 +282,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#example-usage" class="md-nav__link">
-    Example Usage
+  <a href="#authentication" class="md-nav__link">
+    Authentication
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-the-data" class="md-nav__link">
+    Accessing the data
   </a>
   
 </li>
@@ -300,6 +305,20 @@
         <li class="md-nav__item">
   <a href="#level-of-support" class="md-nav__link">
     Level of Support
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glossary" class="md-nav__link">
+    Glossary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contributors" class="md-nav__link">
+    Contributors
   </a>
   
 </li>
@@ -842,9 +861,7 @@
             
             
               
-                
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -877,8 +894,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#example-usage" class="md-nav__link">
-    Example Usage
+  <a href="#authentication" class="md-nav__link">
+    Authentication
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-the-data" class="md-nav__link">
+    Accessing the data
   </a>
   
 </li>
@@ -893,6 +917,20 @@
         <li class="md-nav__item">
   <a href="#level-of-support" class="md-nav__link">
     Level of Support
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glossary" class="md-nav__link">
+    Glossary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contributors" class="md-nav__link">
+    Contributors
   </a>
   
 </li>
@@ -918,97 +956,139 @@
                 
 
 
-<h1 id="earthaccess">earthaccess 🌍</h1>
+<h1 id="earthaccess"><strong>earthaccess</strong> 🌍</h1>
+<p>A python library to search, download or stream NASA Earthdata data with just a few lines of code. </p>
 <p align="center">
-    <em>Client library for NASA CMR and EDL APIs</em>
-</p>
 
-<p align="center">
-<a href="https://github.com/nsidc/earthaccess/actions?query=workflow%3ATest" target="_blank">
-    <img src="https://github.com/nsidc/earthaccess/workflows/Test/badge.svg" alt="Test">
+<a href="https://pypi.org/project/earthdata" target="_blank">
+    <img src="https://img.shields.io/pypi/v/earthdata?color=%2334D058&label=pypi%20package" alt="Package version">
 </a>
-<a href="https://github.com/nsidc/earthaccess/actions?query=workflow%3APublish" target="_blank">
-    <img src="https://github.com/nsidc/earthaccess/workflows/Publish/badge.svg" alt="Publish">
+
+<a href="https://pypi.org/project/earthdata/" target="_blank">
+    <img src="https://img.shields.io/pypi/pyversions/earthdata.svg" alt="Python Versions">
 </a>
-<a href="https://pypi.org/project/earthaccess" target="_blank">
-    <img src="https://img.shields.io/pypi/v/earthaccess?color=%2334D058&label=pypi%20package" alt="Package version">
-</a>
-<a href="https://pypi.org/project/earthaccess/" target="_blank">
-    <img src="https://img.shields.io/pypi/pyversions/earthaccess.svg" alt="Python Versions">
-</a>
+
 <a href="https://github.com/psf/black" target="_blank">
     <img src="https://img.shields.io/badge/code%20style-black-000000.svg" alt="Code style: black">
 </a>
 
+<a href="https://nsidc.github.io/earthdata/" target="_blank">
+    <img src="https://readthedocs.org/projects/earthdata/badge/?version=latest&style=plastic" alt="Documentation link">
+</a>
+
 </p>
 
-<hr />
 <h2 id="overview">Overview</h2>
-<p><a href="https://mybinder.org/v2/gh/betolink/earthaccess/main"><img alt="Binder" src="https://mybinder.org/badge_logo.svg" /></a></p>
-<p>A Python library to search and access NASA datasets.</p>
+<p>The power of open science only reaches its full potential if we have easy-to-use workflows that facilitate research in an inclusive, efficient and reproducible way. Unfortunately —as it stands today— scientists and students alike face a steep learning curve adapting to systems that have grown too complex and end up spending more time on the technicalities of the tools, cloud and NASA APIs than focusing on their important science.</p>
+<p>During several workshops organized by <a href="https://nasa-openscapes.github.io/events.html">NASA Openscapes</a> the need to provide easy-to-use tools to our users became evident. Reproducible  workflows are extremely important in the age of cloud computing and open science. We cannot afford to complicate things further; the simpler the code the better. Open Science is a collaborative effort, it involves people from different technical backgrounds. Data analysis for the pressing problems we face cannot be limited by the lack of computer engineering skills. This is the motivation behind earthaccess.</p>
+<p>With <em>earthaccess</em> we can login with NASA Earthdata, search and download data with a few lines of code and even more relevant, our code will work the same way if we are running it in the cloud or from our laptop. <strong><em>earthaccess</em></strong> handles authentication with <a href="https://urs.earthdata.nasa.gov">NASA's Earthdata Login (EDL)</a>, search using NASA's <a href="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html">CMR</a> and access through <a href="https://github.com/fsspec/filesystem_spec"><code>fsspec</code></a>. If all of this sounds like gibberish... no worries we are here to help! Please ask us anything on <a href="https://github.com/nsidc/earthdata/discussions">project board!</a>.</p>
+<p>The only requirement to use this library is to open a free account with NASA <a href="https://urs.earthdata.nasa.gov">EDL</a>.</p>
+<blockquote>
+<p><strong>⚠️ Warning ⚠️</strong>: The project has recently been renamed from earthdata to earthaccess. If your environment depends on earthdata, please update your reference to earthaccess v0.5.0</p>
+</blockquote>
+<p><img src="https://user-images.githubusercontent.com/717735/205374132-78dfec51-3998-4862-89bc-d14610bf1b89.jpg" /></p>
+<blockquote>
+<p>Artwork by Allison Horst.</p>
+</blockquote>
 <h2 id="installing-earthaccess">Installing earthaccess</h2>
-<p>Install the latest release:</p>
+<p>Install the latest release using conda</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="__codelineno-0-1"></a>conda install -c conda-forge earthaccess
 </code></pre></div>
-<p>Or you can clone <code>earthaccess</code> and get started locally</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="__codelineno-1-1"></a><span class="c1"># ensure you have Poetry installed</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="__codelineno-1-2"></a>pip install --user poetry
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="__codelineno-1-3"></a>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="__codelineno-1-4"></a><span class="c1"># install all dependencies (including dev)</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="__codelineno-1-5"></a>poetry install
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="__codelineno-1-6"></a>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="__codelineno-1-7"></a><span class="c1"># develop!</span>
+<p>Using Pip</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="__codelineno-1-1"></a>pip install earthaccess
 </code></pre></div>
-<h2 id="example-usage">Example Usage</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="__codelineno-2-1"></a><span class="kn">from</span> <span class="nn">earthaccess</span> <span class="kn">import</span> <span class="n">Auth</span><span class="p">,</span> <span class="n">DataGranules</span><span class="p">,</span> <span class="n">DataCollections</span><span class="p">,</span> <span class="n">Store</span>
+<p>Try it in your browser without installing anything! <a href="https://mybinder.org/v2/gh/nsidc/earthdata/main"><img alt="Binder" src="https://mybinder.org/badge_logo.svg" /></a></p>
+<h2 id="authentication">Authentication</h2>
+<p>Once you have an EDL account, you can authenticate using one of the following three methods:</p>
+<ol>
+<li>Using a <code>.netrc</code> file<ul>
+<li>Can use <em>earthaccess</em> to read your EDL credentials (username and password) from a <code>.netrc</code> file</li>
+</ul>
+</li>
+<li>Reading your EDL credentials from environment variables<ul>
+<li>if available you can use environment variables <strong>EDL_USERNAME</strong> and <strong>EDL_PASSWORD</strong></li>
+</ul>
+</li>
+<li>Interactively entering your EDL credentials<ul>
+<li>You can be prompted for these credentials and save them to a <code>.netrc</code> file</li>
+</ul>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="__codelineno-2-1"></a><span class="kn">import</span> <span class="nn">earthaccess</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="__codelineno-2-2"></a>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="__codelineno-2-3"></a><span class="n">auth</span> <span class="o">=</span> <span class="n">Auth</span><span class="p">()</span><span class="o">.</span><span class="n">login</span><span class="p">()</span> <span class="c1"># if we want to access NASA DATA in the cloud</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="__codelineno-2-4"></a>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="__codelineno-2-5"></a><span class="c1"># To search for collecrtions (datasets)</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="__codelineno-2-6"></a>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="__codelineno-2-7"></a><span class="n">DatasetQuery</span> <span class="o">=</span> <span class="n">DataCollections</span><span class="p">()</span><span class="o">.</span><span class="n">keyword</span><span class="p">(</span><span class="s1">&#39;MODIS&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">bounding_box</span><span class="p">(</span><span class="o">-</span><span class="mf">26.85</span><span class="p">,</span><span class="mf">62.65</span><span class="p">,</span><span class="o">-</span><span class="mf">11.86</span><span class="p">,</span><span class="mf">67.08</span><span class="p">)</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="__codelineno-2-8"></a>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="__codelineno-2-9"></a><span class="n">counts</span> <span class="o">=</span> <span class="n">DatasetQuery</span><span class="o">.</span><span class="n">hits</span><span class="p">()</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="__codelineno-2-10"></a><span class="n">collections</span> <span class="o">=</span> <span class="n">DatasetQuery</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="__codelineno-2-11"></a>
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="__codelineno-2-12"></a>
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="__codelineno-2-13"></a><span class="c1"># To search for granules (data files)</span>
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="__codelineno-2-14"></a><span class="n">GranuleQuery</span> <span class="o">=</span> <span class="n">DataGranules</span><span class="p">()</span><span class="o">.</span><span class="n">concept_id</span><span class="p">(</span><span class="s1">&#39;C1711961296-LPCLOUD&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">bounding_box</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">50</span><span class="p">)</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="__codelineno-2-3"></a><span class="n">auth</span> <span class="o">=</span> <span class="n">earthaccess</span><span class="o">.</span><span class="n">login</span><span class="p">(</span><span class="n">strategy</span><span class="o">=</span><span class="s2">&quot;netrc&quot;</span><span class="p">)</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="__codelineno-2-4"></a><span class="k">if</span> <span class="ow">not</span> <span class="n">auth</span><span class="p">:</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="__codelineno-2-5"></a>    <span class="n">auth</span> <span class="o">=</span> <span class="n">earthaccess</span><span class="o">.</span><span class="n">login</span><span class="p">(</span><span class="n">strategy</span><span class="o">=</span><span class="s2">&quot;interactive&quot;</span><span class="p">,</span> <span class="n">persist</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="__codelineno-2-6"></a> <span class="err">```</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="__codelineno-2-7"></a>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="__codelineno-2-8"></a><span class="n">Once</span> <span class="n">you</span> <span class="n">are</span> <span class="n">authenticated</span> <span class="k">with</span> <span class="n">NASA</span> <span class="n">EDL</span> <span class="n">you</span> <span class="n">can</span><span class="p">:</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="__codelineno-2-9"></a>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="__codelineno-2-10"></a><span class="o">*</span> <span class="n">Get</span> <span class="n">a</span> <span class="n">file</span> <span class="kn">from</span> <span class="nn">a</span> <span class="n">DAAC</span> <span class="n">using</span> <span class="n">a</span> <span class="err">`</span><span class="n">fsspec</span><span class="err">`</span> <span class="n">session</span><span class="o">.</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="__codelineno-2-11"></a><span class="o">*</span> <span class="n">Request</span> <span class="n">temporary</span> <span class="n">S3</span> <span class="n">credentials</span> <span class="kn">from</span> <span class="nn">a</span> <span class="n">particular</span> <span class="n">DAAC</span> <span class="p">(</span><span class="n">needed</span> <span class="n">to</span> <span class="n">download</span> <span class="ow">or</span> <span class="n">stream</span> <span class="n">data</span> <span class="kn">from</span> <span class="nn">an</span> <span class="n">S3</span> <span class="n">bucket</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">cloud</span><span class="p">)</span><span class="o">.</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="__codelineno-2-12"></a><span class="o">*</span> <span class="n">Use</span> <span class="n">the</span> <span class="n">library</span> <span class="n">to</span> <span class="n">download</span> <span class="ow">or</span> <span class="n">stream</span> <span class="n">data</span> <span class="n">directly</span> <span class="kn">from</span> <span class="nn">S3.</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="__codelineno-2-13"></a><span class="o">*</span> <span class="n">Regenerate</span> <span class="n">CMR</span> <span class="n">tokens</span> <span class="p">(</span><span class="n">used</span> <span class="k">for</span> <span class="n">restricted</span> <span class="n">datasets</span><span class="p">)</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="__codelineno-2-14"></a>
 <a id="__codelineno-2-15" name="__codelineno-2-15" href="__codelineno-2-15"></a>
-<a id="__codelineno-2-16" name="__codelineno-2-16" href="__codelineno-2-16"></a><span class="c1"># number of granules (data files) that matched our criteria</span>
-<a id="__codelineno-2-17" name="__codelineno-2-17" href="__codelineno-2-17"></a><span class="n">counts</span> <span class="o">=</span> <span class="n">GranuleQuery</span><span class="o">.</span><span class="n">hits</span><span class="p">()</span>
-<a id="__codelineno-2-18" name="__codelineno-2-18" href="__codelineno-2-18"></a><span class="c1"># We get the metadata</span>
-<a id="__codelineno-2-19" name="__codelineno-2-19" href="__codelineno-2-19"></a><span class="n">granules</span> <span class="o">=</span> <span class="n">GranuleQuery</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="__codelineno-2-16"></a><span class="c1">## Searching for data</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="__codelineno-2-17"></a>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="__codelineno-2-18"></a><span class="n">Once</span> <span class="n">we</span> <span class="n">have</span> <span class="n">selected</span> <span class="n">our</span> <span class="n">dataset</span> <span class="n">we</span> <span class="n">can</span> <span class="n">search</span> <span class="k">for</span> <span class="n">the</span> <span class="n">data</span> <span class="n">granules</span> <span class="n">using</span> <span class="o">*</span><span class="n">doi</span><span class="o">*</span><span class="p">,</span> <span class="o">*</span><span class="n">short_name</span><span class="o">*</span> <span class="ow">or</span> <span class="o">*</span><span class="n">concept_id</span><span class="o">*.</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="__codelineno-2-19"></a><span class="n">If</span> <span class="n">are</span> <span class="ow">not</span> <span class="n">sure</span> <span class="ow">or</span> <span class="n">we</span> <span class="n">don</span><span class="s1">&#39;t know how to search for a particular dataset we can start with the &quot;searching for data&quot; tutorial or through the [Earthdata search portal](https://search.earthdata.nasa.gov/). For a complete list of search parameters we can use visit the API extended documentation.</span>
 <a id="__codelineno-2-20" name="__codelineno-2-20" href="__codelineno-2-20"></a>
-<a id="__codelineno-2-21" name="__codelineno-2-21" href="__codelineno-2-21"></a><span class="c1"># earthaccess provides some convenience functions for each data granule</span>
-<a id="__codelineno-2-22" name="__codelineno-2-22" href="__codelineno-2-22"></a><span class="n">data_links</span> <span class="o">=</span> <span class="p">[</span><span class="n">granule</span><span class="o">.</span><span class="n">data_links</span><span class="p">()</span> <span class="k">for</span> <span class="n">granule</span> <span class="ow">in</span> <span class="n">granules</span><span class="p">]</span>
-<a id="__codelineno-2-23" name="__codelineno-2-23" href="__codelineno-2-23"></a>
-<a id="__codelineno-2-24" name="__codelineno-2-24" href="__codelineno-2-24"></a><span class="c1"># The Store class allows to get the granules from on-prem locations with get()</span>
-<a id="__codelineno-2-25" name="__codelineno-2-25" href="__codelineno-2-25"></a><span class="c1"># NOTE: Some datasets require users to accept a Licence Agreement before accessing them</span>
-<a id="__codelineno-2-26" name="__codelineno-2-26" href="__codelineno-2-26"></a><span class="n">store</span> <span class="o">=</span> <span class="n">Store</span><span class="p">(</span><span class="n">auth</span><span class="p">)</span>
-<a id="__codelineno-2-27" name="__codelineno-2-27" href="__codelineno-2-27"></a>
-<a id="__codelineno-2-28" name="__codelineno-2-28" href="__codelineno-2-28"></a><span class="c1"># This works with both, on-prem or cloud based collections**</span>
-<a id="__codelineno-2-29" name="__codelineno-2-29" href="__codelineno-2-29"></a><span class="n">store</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">granules</span><span class="p">,</span> <span class="n">local_path</span><span class="o">=</span><span class="s1">&#39;./data&#39;</span><span class="p">)</span>
-<a id="__codelineno-2-30" name="__codelineno-2-30" href="__codelineno-2-30"></a>
-<a id="__codelineno-2-31" name="__codelineno-2-31" href="__codelineno-2-31"></a><span class="c1"># if you&#39;re in a AWS instance (us-west-2) you can use open() to get a fileset!</span>
-<a id="__codelineno-2-32" name="__codelineno-2-32" href="__codelineno-2-32"></a><span class="n">fileset</span> <span class="o">=</span> <span class="n">store</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">granules</span><span class="p">)</span>
-<a id="__codelineno-2-33" name="__codelineno-2-33" href="__codelineno-2-33"></a>
-<a id="__codelineno-2-34" name="__codelineno-2-34" href="__codelineno-2-34"></a><span class="c1"># Given that this is gridded data we could</span>
-<a id="__codelineno-2-35" name="__codelineno-2-35" href="__codelineno-2-35"></a><span class="n">xarray</span><span class="o">.</span><span class="n">open_mfdataset</span><span class="p">(</span><span class="n">fileset</span><span class="p">,</span> <span class="n">combine</span><span class="o">=</span><span class="s1">&#39;by_coords&#39;</span><span class="p">)</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="__codelineno-2-21"></a><span class="err">```</span><span class="n">python</span>
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="__codelineno-2-22"></a>
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="__codelineno-2-23"></a><span class="n">results</span> <span class="o">=</span> <span class="n">earthaccess</span><span class="o">.</span><span class="n">search_data</span><span class="p">(</span>
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="__codelineno-2-24"></a>    <span class="n">short_name</span><span class="o">=</span><span class="s1">&#39;ATL06&#39;</span><span class="p">,</span>
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="__codelineno-2-25"></a>    <span class="n">version</span><span class="o">=</span><span class="s2">&quot;005&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-26" name="__codelineno-2-26" href="__codelineno-2-26"></a>    <span class="n">cloud_hosted</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<a id="__codelineno-2-27" name="__codelineno-2-27" href="__codelineno-2-27"></a>    <span class="n">bounding_box</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">50</span><span class="p">),</span>
+<a id="__codelineno-2-28" name="__codelineno-2-28" href="__codelineno-2-28"></a>    <span class="n">temporal</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;2020-02&quot;</span><span class="p">,</span> <span class="s2">&quot;2020-03&quot;</span><span class="p">),</span>
+<a id="__codelineno-2-29" name="__codelineno-2-29" href="__codelineno-2-29"></a>    <span class="n">count</span><span class="o">=</span><span class="mi">100</span>
+<a id="__codelineno-2-30" name="__codelineno-2-30" href="__codelineno-2-30"></a><span class="p">)</span>
 </code></pre></div>
-<p>For more examples see the <code>Demo</code> and <code>EarthdataSearch</code> notebooks.</p>
-<p>Only <strong>Python 3.7+</strong> is supported as required by the black, pydantic packages</p>
+<p>Now that we have our results we can do multiple things, we can iterate over them to get HTTP (or S3) links; we can download the files to a local folder or we can open these files and stream their content directly to other libraries e.g. xarray.</p>
+<h2 id="accessing-the-data">Accessing the data</h2>
+<h3 id="option-1-using-the-data-links">Option 1: Using the data links</h3>
+<p>If we already have a workflow in place for downloading our data, we can use <em>earthaccess</em> as a search-only library and get HTTP links from our query results. This could be the case if our current workflow uses a different language and we only need the links as input.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="__codelineno-3-1"></a><span class="c1"># if the data set is cloud hosted there will be S3 links available. The access parameter accepts &quot;direct&quot; or &quot;external&quot;, direct access is only possible if you are in the us-west-2 region in the cloud.</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="__codelineno-3-2"></a><span class="n">data_links</span> <span class="o">=</span> <span class="p">[</span><span class="n">granule</span><span class="o">.</span><span class="n">data_links</span><span class="p">(</span><span class="n">access</span><span class="o">=</span><span class="s2">&quot;direct&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">granule</span> <span class="ow">in</span> <span class="n">results</span><span class="p">]</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="__codelineno-3-4"></a><span class="c1"># or if the data is an on-prem dataset</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="__codelineno-3-5"></a><span class="n">data_links</span> <span class="o">=</span> <span class="p">[</span><span class="n">granule</span><span class="o">.</span><span class="n">data_links</span><span class="p">(</span><span class="n">access</span><span class="o">=</span><span class="s2">&quot;external&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">granule</span> <span class="ow">in</span> <span class="n">results</span><span class="p">]</span>
+</code></pre></div>
+<blockquote>
+<p>Note: as a bonus, <em>earthaccess</em> can get S3 credentials for us, or auhenticated HTTP sessions in case we want to use them with a different library.</p>
+</blockquote>
+<h3 id="option-2-download-the-data-to-a-local-folder">Option 2: Download the data to a local folder</h3>
+<p>This option is practical if you have the necessary space available on disk, the <em>earthaccess</em> library will print out the approximate size of the download and its progress.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="__codelineno-4-1"></a><span class="n">files</span> <span class="o">=</span> <span class="n">earthaccess</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="n">results</span><span class="p">,</span> <span class="s2">&quot;./local_folder&quot;</span><span class="p">)</span>
+</code></pre></div></p>
+<h3 id="option-3-direct-s3-access-stream-the-data-directly-to-xarray">Option 3: Direct S3 Access - Stream the data directly to xarray</h3>
+<p>This method works best if you are in the same region as the data (us-west-2) and you are working with gridded datasets (processing level 3 and above).</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="__codelineno-5-1"></a><span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="__codelineno-5-3"></a><span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_mfdataset</span><span class="p">(</span><span class="n">earthaccess</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">results</span><span class="p">,</span> <span class="n">auth</span><span class="o">=</span><span class="n">auth</span><span class="p">),</span> <span class="n">engine</span><span class="o">=</span><span class="s2">&quot;scipy&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>And that's it! Just one line of code, and this same piece of code will also work for data that are not hosted in the cloud, i.e. NASA hosted data sets.</p>
+<blockquote>
+<p>More examples coming soon!</p>
+</blockquote>
+<h3 id="compatibility">Compatibility</h3>
+<p>Only <strong>Python 3.8+</strong> is supported.</p>
 <h2 id="code-of-conduct">Code of Conduct</h2>
-<p>See <a href="https://github.com/nsidc/earthaccess/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a></p>
+<p>See <a href="CODE_OF_CONDUCT.md">Code of Conduct</a></p>
 <h2 id="level-of-support">Level of Support</h2>
 <ul>
 <li>This repository is not actively supported by NSIDC but we welcome issue submissions and pull requests in order to foster community contribution.</li>
 </ul>
-<p><img src="nsidc-logo.png" width="84px" /></p>
+<p><img src="https://raw.githubusercontent.com/nsidc/earthdata/main/docs/nsidc-logo.png" width="84px" /></p>
+<h2 id="glossary">Glossary</h2>
+<p><a href="https://www.earthdata.nasa.gov/learn/glossary"><img src="https://auth.ops.maap-project.org/cas/images/urs-logo.png" /></a></p>
+<h2 id="contributors">Contributors</h2>
+<p><a href="https://github.com/nsidc/earthdata/graphs/contributors"><img alt="Contributors" src="https://contrib.rocks/image?repo=nsidc/earthdata" /></a></p>
 <h2 id="contributing-guide">Contributing Guide</h2>
 <p>Welcome! 😊👋</p>
 <blockquote>
-<p>Please see the <a href="https://github.com/nsidc/earthaccess/blob/main/CONTRIBUTING.md">Contributing Guide</a></p>
+<p>Please see the <a href="CONTRIBUTING.md">Contributing Guide</a>.</p>
 </blockquote>
 
               
